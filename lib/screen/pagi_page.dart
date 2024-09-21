@@ -63,20 +63,6 @@ class _PagipageState extends State<Pagipage> {
             )
           ],
         ),
-        // Row(
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Padding(
-        //       padding: EdgeInsets.only(top: screenHeight * 0.16),
-        //       child: Text("Doa Al-matsurat Pagi",
-        //           style: TextStyle(
-        //               fontFamily: 'Dongle',
-        //               color: Colors.white,
-        //               fontSize: 75,
-        //               fontWeight: FontWeight.bold)),
-        //     )
-        //   ],
-        // ),
         Positioned(
           left: screenWidth * 0.045,
           top: screenHeight * 0.065,

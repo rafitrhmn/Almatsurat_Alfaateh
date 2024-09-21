@@ -1,3 +1,4 @@
+import 'package:apk_almatsurat/screen/pagi_page.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
       body: Column(
         children: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const Pagipage()),
+              );
+            },
             child: Stack(
               children: [
                 Image.asset(
@@ -90,7 +96,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-       
         ],
       ),
     );
