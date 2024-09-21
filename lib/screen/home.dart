@@ -90,12 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ],
             ),
           ),
-          // Image.asset(
-          //   'assets/images/gambar_petang.png',
-          //   width: screenWidth,
-          //   height: screenHeight * 0.5,
-          //   fit: BoxFit.cover,
-          // )
+       
         ],
       ),
     );
