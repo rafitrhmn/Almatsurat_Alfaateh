@@ -63,6 +63,9 @@ flutter:
   #   - images/a_dot_burr.jpeg
     - assets/images/gambar_pagi.png
     - assets/images/gambar_petang.png
+    - assets/icon/icon_home.png
+    - assets/icon/sun_ligthts.png
+    # D:\apk_almatsurat_folder\my_app\assets\icon\sun_ligthts.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
