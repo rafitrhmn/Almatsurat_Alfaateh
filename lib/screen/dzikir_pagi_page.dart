@@ -1,4 +1,7 @@
+import 'package:apk_almatsurat/bloc/dzikir_bloc.dart';
+import 'package:apk_almatsurat/bloc/dzikir_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class DzikirPagiPage extends StatefulWidget {
   const DzikirPagiPage({super.key});
@@ -8,109 +11,195 @@ class DzikirPagiPage extends StatefulWidget {
 }
 
 class _DzikirPagiPageState extends State<DzikirPagiPage> {
+  int currentIndex = 0; // Menyimpan indeks data saat ini
+  final ScrollController _scrollController =
+      ScrollController(); // Controller untuk scroll
+
+  void _onSwipeRight(BuildContext context, int maxIndex) {
+    // Geser ke kanan (data berikutnya)
+    setState(() {
+      currentIndex = (currentIndex + 1) % maxIndex;
+    });
+    _resetScrollPosition(); // Reset posisi scroll ke atas
+  }
+
+  void _onSwipeLeft(BuildContext context, int maxIndex) {
+    // Geser ke kiri (data sebelumnya)
+    setState(() {
+      currentIndex = (currentIndex - 1 + maxIndex) % maxIndex;
+    });
+    _resetScrollPosition(); // Reset posisi scroll ke atas
+  }
+
+  void _resetScrollPosition() {
+    // Kembalikan scroll ke posisi atas
+    _scrollController.animateTo(
+      0.0,
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeOut,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    final screenHeight = MediaQuery.of(context).size.height;
-    final screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Container(
-          width: screenWidth,
-          color: Color(0xFFE48D58),
-          child: Stack(children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: screenHeight * 0.065),
-                  child: Image.asset('assets/icon/sun_ligthts.png'),
-                ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: screenHeight * 0.103),
-                  child: Text(
-                    '1/30',
-                    style: TextStyle(
-                        fontFamily: 'Dongle',
-                        color: Colors.white,
-                        fontSize: 30),
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: screenHeight * 0.192),
-                  child: Container(
-                    width: screenWidth * 0.9, // Mengatur lebar kontainer teks
-                    child: const Text(
-                      "Surah Al-Baqarah ayat 7",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          fontFamily: 'Dongle',
-                          color: Colors.white,
-                          fontSize: 58.5,
-                          fontWeight: FontWeight.bold,
-                          height: 0.7),
-                      softWrap: true, // Mengizinkan teks membungkus ke bawah
-                      overflow:
-                          TextOverflow.visible, // Menghindari teks terpotong
+      body: BlocBuilder<DzikirBloc, DzikirState>(
+        builder: (context, state) {
+          if (state is DzikirLoadingState) {
+            print('disni');
+            return const Center(child: CircularProgressIndicator());
+          } else if (state is DzikirLoadedState) {
+            final dzikirData = state.dzikirData;
+            final maxIndex = dzikirData.length;
+
+            return GestureDetector(
+              onHorizontalDragEnd: (details) {
+                if (details.primaryVelocity != null) {
+                  if (details.primaryVelocity! < 0) {
+                    // Geser ke kanan
+                    _onSwipeRight(context, maxIndex);
+                  } else if (details.primaryVelocity! > 0) {
+                    // Geser ke kiri
+                    _onSwipeLeft(context, maxIndex);
+                  }
+                }
+              },
+              onVerticalDragUpdate: (_) {},
+              child: Container(
+                color: const Color(0xFFE48D58),
+                child: Stack(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 55),
+                          child: Image.asset(
+                            'assets/icon/sun_2.png',
+                            width: 65,
+                            height: 34,
+                          ),
+                        ),
+                      ],
                     ),
-                  ),
-                )
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(top: screenHeight * 0.33),
-                  child: Container(
-                    width: screenWidth * 0.93, // Mengatur lebar kontainer teks
-                    child: const Text(
-                      "يَا رَبِّي لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَلِعَظِيمِ سُلْطَانِكَ",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                          // fontFamily: 'Amiri',
-                          fontFamily: 'lpmq',
-                          color: Colors.white,
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
-                          height: 2.32),
-                      softWrap: true, // Mengizinkan teks membungkus ke bawah
-                      overflow:
-                          TextOverflow.visible, // Menghindari teks terpotong
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.only(top: 90),
+                          child: Text(
+                            '${currentIndex + 1} / $maxIndex',
+                            style: TextStyle(
+                                fontFamily: 'Dongle',
+                                color: Colors.white,
+                                fontSize: 30),
+                          ),
+                        )
+                      ],
                     ),
-                  ),
-                )
-              ],
-            ),
-            Positioned(
-              left: screenWidth * 0.045,
-              top: screenHeight * 0.065,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: const Icon(
-                  Icons.home_rounded,
-                  color: Colors.white,
-                  size: 40,
+                    // Konten Surah
+                    Center(
+                      child: Column(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(top: 150),
+                            child: Text(
+                              dzikirData[currentIndex]['surah'],
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                fontFamily: 'Dongle',
+                                color: Colors.white,
+                                fontSize: 58.5,
+                                fontWeight: FontWeight.bold,
+                                height: 0.82, // Jarak antar baris
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Expanded(
+                            child: SingleChildScrollView(
+                              controller:
+                                  _scrollController, // Tambahkan controller
+                              child: Column(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 13),
+                                    child: Text(
+                                      dzikirData[currentIndex]['dzikir'],
+                                      textAlign: TextAlign.center,
+                                      style: const TextStyle(
+                                        fontFamily: 'lpmq',
+                                        color: Colors.white,
+                                        fontSize: 30,
+                                        fontWeight: FontWeight.w500,
+                                        height: 2.32, // Jarak antar baris
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 5,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 13),
+                                    child: Text(
+                                      dzikirData[currentIndex]['arti'],
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 33,
+                                        fontFamily: 'Dongle',
+                                        fontWeight: FontWeight.w400,
+                                        height: 1.2,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(
+                                    height: 30,
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                    Positioned(
+                      left: 13,
+                      top: 60,
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: Image.asset(
+                            'assets/icon/home_2.png',
+                            width: 34,
+                            height: 32,
+                          )),
+                    )
+                  ],
                 ),
               ),
-            )
-          ]),
-        ),
+            );
+          } else if (state is DzikirErrorState) {
+            return Center(
+              child: Text(
+                'Error: ${state.error}',
+                style: const TextStyle(fontSize: 16, color: Colors.red),
+              ),
+            );
+          }
+          return const SizedBox();
+        },
       ),
     );
   }
 }
+
+
 
 // import 'package:apk_almatsurat/bloc/dzikir_bloc.dart';
 // import 'package:apk_almatsurat/bloc/dzikir_event.dart';
@@ -213,4 +302,232 @@ class _DzikirPagiPageState extends State<DzikirPagiPage> {
 //       ),
 //     );
 //   }
+// }
+
+// return Container(
+//   color: Color(0xFFE48D58),
+//   child: Stack(children: [
+//     Row(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Padding(
+//           padding: EdgeInsets.only(top: 15),
+//           child: Image.asset('assets/icon/sun_ligthts.png'),
+//         ),
+//       ],
+//     ),
+//     Row(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Padding(
+//           padding: EdgeInsets.only(top: 15),
+//           child: Text(
+//             '1/30',
+//             style: TextStyle(
+//                 fontFamily: 'Dongle',
+//                 color: Colors.white,
+//                 fontSize: 30),
+//           ),
+//         )
+//       ],
+//     ),
+//     Row(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Padding(
+//           padding: EdgeInsets.only(top: 10),
+//           child: Container(
+//             // width: screenWidth * 0.9, // Mengatur lebar kontainer teks
+//             child: const Text(
+//               "Surah Al-Baqarah ayat 7",
+//               textAlign: TextAlign.center,
+//               style: TextStyle(
+//                   fontFamily: 'Dongle',
+//                   color: Colors.white,
+//                   fontSize: 58.5,
+//                   fontWeight: FontWeight.bold,
+//                   height: 0.7),
+//               softWrap: true, // Mengizinkan teks membungkus ke bawah
+//               overflow:
+//                   TextOverflow.visible, // Menghindari teks terpotong
+//             ),
+//           ),
+//         )
+//       ],
+//     ),
+//     Row(
+//       mainAxisAlignment: MainAxisAlignment.center,
+//       children: [
+//         Padding(
+//           padding: EdgeInsets.only(top: 10),
+//           child: Container(
+//             // width: screenWidth * 0.93, // Mengatur lebar kontainer teks
+//             child: const Text(
+//               "يَا رَبِّي لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَلِعَظِيمِ سُلْطَانِكَ",
+//               textAlign: TextAlign.center,
+//               style: TextStyle(
+//                   // fontFamily: 'Amiri',
+//                   fontFamily: 'lpmq',
+//                   color: Colors.white,
+//                   fontSize: 30,
+//                   fontWeight: FontWeight.w500,
+//                   height: 2.32),
+//               softWrap: true, // Mengizinkan teks membungkus ke bawah
+//               overflow:
+//                   TextOverflow.visible, // Menghindari teks terpotong
+//             ),
+//           ),
+//         )
+//       ],
+//     ),
+//     Positioned(
+//       left: 10,
+//       top: 10,
+//       child: GestureDetector(
+//         onTap: () {
+//           Navigator.pop(context);
+//         },
+//         child: const Icon(
+//           Icons.home_rounded,
+//           color: Colors.white,
+//           size: 40,
+//         ),
+//       ),
+//     )
+//   ]),
+// );
+
+// @override
+// Widget build(BuildContext context) {
+//   return Scaffold(
+//     body: BlocBuilder<DzikirBloc, DzikirState>(
+//       builder: (context, state) {
+//         if (state is DzikirLoadingState) {
+//           return const Center(child: CircularProgressIndicator());
+//         } else if (state is DzikirLoadedState) {
+//           final dzikirData = state.dzikirData;
+//           final maxIndex = dzikirData.length;
+
+//           return GestureDetector(
+//             onHorizontalDragEnd: (details) {
+//               if (details.primaryVelocity != null) {
+//                 if (details.primaryVelocity! < 0) {
+//                   _onSwipeRight(maxIndex); // Geser ke kanan
+//                 } else if (details.primaryVelocity! > 0) {
+//                   _onSwipeLeft(maxIndex); // Geser ke kiri
+//                 }
+//               }
+//             },
+//             child: Stack(
+//               children: [
+//                 // Bagian konten yang dapat di-scroll
+//                 SingleChildScrollView(
+//                   child: Padding(
+//                     padding: const EdgeInsets.only(
+//                         top: 150), // Geser konten ke bawah
+//                     child: Column(
+//                       children: [
+//                         // Nama Surah
+//                         Padding(
+//                           padding: const EdgeInsets.symmetric(horizontal: 16),
+//                           child: Text(
+//                             dzikirData[currentIndex]['surah'],
+//                             textAlign: TextAlign.center,
+//                             style: const TextStyle(
+//                               fontFamily: 'Dongle',
+//                               color: Colors.white,
+//                               fontSize: 58.5,
+//                               fontWeight: FontWeight.bold,
+//                               height: 0.82,
+//                             ),
+//                           ),
+//                         ),
+//                         const SizedBox(height: 15),
+
+//                         // Dzikir
+//                         Padding(
+//                           padding: const EdgeInsets.symmetric(horizontal: 16),
+//                           child: Text(
+//                             dzikirData[currentIndex]['dzikir'],
+//                             textAlign: TextAlign.center,
+//                             style: const TextStyle(
+//                               fontFamily: 'lpmq',
+//                               color: Colors.white,
+//                               fontSize: 30,
+//                               fontWeight: FontWeight.w500,
+//                               height: 2.32,
+//                             ),
+//                           ),
+//                         ),
+//                         const SizedBox(height: 20),
+//                       ],
+//                     ),
+//                   ),
+//                 ),
+
+//                 // Ikon Matahari
+//                 Positioned(
+//                   top: 55,
+//                   left: 0,
+//                   right: 0,
+//                   child: Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//                       Image.asset(
+//                         'assets/icon/sun_2.png',
+//                         width: 65,
+//                         height: 34,
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+
+//                 // Indikator Halaman
+//                 Positioned(
+//                   top: 90,
+//                   left: 0,
+//                   right: 0,
+//                   child: Row(
+//                     mainAxisAlignment: MainAxisAlignment.center,
+//                     children: [
+//                       Text(
+//                         '${currentIndex + 1} / $maxIndex',
+//                         style: const TextStyle(
+//                           fontFamily: 'Dongle',
+//                           color: Colors.white,
+//                           fontSize: 30,
+//                         ),
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+
+//                 // Tombol Kembali
+//                 Positioned(
+//                   left: 13,
+//                   top: 60,
+//                   child: GestureDetector(
+//                     onTap: () => Navigator.pop(context),
+//                     child: Image.asset(
+//                       'assets/icon/home_2.png',
+//                       width: 34,
+//                       height: 32,
+//                     ),
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           );
+//         } else if (state is DzikirErrorState) {
+//           return Center(
+//             child: Text(
+//               'Error: ${state.error}',
+//               style: const TextStyle(fontSize: 16, color: Colors.red),
+//             ),
+//           );
+//         }
+//         return const SizedBox();
+//       },
+//     ),
+//   );
 // }
