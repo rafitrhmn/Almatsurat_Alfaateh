@@ -1,23 +1,22 @@
 Map<String, dynamic> response = {
   "status": "success",
-  "message": "Al-Matsurat Sore Sugro",
+  "message": "Al-Matsurat Petang Sugro",
   "data": [
     {
       "no": 1,
-      "surah": "taawudz",
+      "surah": "Taawudz",
       "ayat": "1",
-      "dzikir":
-          "أَعُوذُ بِاللَّهِ السَّمِيعِ الْعَلِيمِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+      "dzikir": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
       "latin": "A'udzubillaahis samii'il 'aliimi minassyaithoonirrojiim ",
       "arti":
           'Aku berlindung kepada Allah yang Maha Mendengar lagi Maha Mengetahui dari godaan syetan yang terkutuk.',
     },
     {
       "no": 2,
-      "surah": "al-fatihah",
+      "surah": "Surah Al-Fatihah",
       "ayat": "1-7",
       "dzikir":
-          "بِسْمِ اللَّـهِ الرَّحْمَـٰنِ الرَّحِيمِ ١ ٱلۡحَمۡدُ لِلَّهِ رَبِّ ٱلۡعَٰلَمِينَ ٢ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ ٣ مَٰلِكِ يَوۡمِ ٱلدِّينِ ٤ إِيَّاكَ نَعۡبُدُ وَإِيَّاكَ نَسۡتَعِينُ ٥ ٱهۡدِنَا ٱلصِّرَٰطَ ٱلۡمُسۡتَقِيمَ ٦ صِرَٰطَ ٱلَّذِينَ أَنۡعَمۡتَ عَلَيۡهِمۡ غَيۡرِ ٱلۡمَغۡضُوبِ عَلَيۡهِمۡ وَلَا ٱلضَّآلِّينَ ٧",
+          "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ ۝١ اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ ۝٢ الرَّحْمٰنِ الرَّحِيْمِۙ ۝٣ مٰلِكِ يَوْمِ الدِّيْنِۗ ۝٤ اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ ۝٥ اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَۙ ۝٦ صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَࣖ ۝٧",
       'latin':
           "Bismillahirrohmaanirrohiim - Al hamdulillaahirobbil 'aalamiin - Ar rohmaanir  rohiim - Maaliki yaumid diin - Iyya ka na'budu wa iyya ka nasta 'iin -Iihdinash  shiroothol mustaqiim - Shirootol ladzina an'amta 'alaihim ghoiril magh dhuu  bi 'alaihim wa ladh dhool liin ",
       "arti":
@@ -25,10 +24,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 3,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 1-5",
       "ayat": "1-5",
       "dzikir":
-          "الٓمٓ ١ ذَٰلِكَ ٱلۡكِتَٰبُ لَا رَيۡبَۛ فِيهِۛ هُدٗى لِّلۡمُتَّقِينَ ٢ ٱلَّذِينَ يُؤۡمِنُونَ بِٱلۡغَيۡبِ وَيُقِيمُونَ ٱلصَّلَوٰةَ وَمِمَّا رَزَقۡنَٰهُمۡ يُنفِقُونَ ۙ ٣ وَٱلَّذِينَ يُؤۡمِنُونَ بِمَآ أُنزِلَ إِلَيۡكَ وَمَآ أُنزِلَ مِن قَبۡلِكَ وَبِٱلۡأٓخِرَةِ هُمۡ يُوقِنُونَ ٤ أُوْلَٰٓئِكَ عَلَىٰ هُدٗى مِّن رَّبِّهِمۡۖ وَأُوْلَٰٓئِكَ هُمُ ٱلۡمُفۡلِحُونَ ٥",
+          " بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ -- الۤمّۤۚ ۝١ ذٰلِكَ الْكِتٰبُ لَا رَيْبَۛ فِيْهِۛ هُدًى لِّلْمُتَّقِيْنَۙ ۝٢ الَّذِيْنَ يُؤْمِنُوْنَ بِالْغَيْبِ وَيُقِيْمُوْنَ الصَّلٰوةَ وَمِمَّا رَزَقْنٰهُمْ يُنْفِقُوْنَۙ ۝٣ وَالَّذِيْنَ يُؤْمِنُوْنَ بِمَآ اُنْزِلَ اِلَيْكَ وَمَآ اُنْزِلَ مِنْ قَبْلِكَۚ وَبِالْاٰخِرَةِ هُمْ يُوْقِنُوْنَۗ ۝٤ اُولٰۤىِٕكَ عَلٰى هُدًى مِّنْ رَّبِّهِمْۙ وَاُولٰۤىِٕكَ هُمُ الْمُفْلِحُوْنَ ۝٥",
       'latin':
           "Bismillaahirrohmaanirrohiim - Alif Laam Miim - Dza likal kitaabu laaroi  bafiihi hudal lilmuttaqiin - Al ladziina yu'minuna bil ghoibi wa  yuqiimunassholaata wa mimma rozaqnaahum yum fiquun - Walladziina yu'  minuuna bimaa unzila ilaika wa maa unzila ming qoblika wa bil aakhiroti hum  yuu qinuun - Ulaa ika 'ala hudam mir  robbihim wa ulaa ika humul muflihuun",
       "arti":
@@ -36,10 +35,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 4,
-      "surah": "al-baqarah",
+      "surah": "Ayat Kursi",
       "ayat": "255",
       "dzikir":
-          "ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡحَيُّ ٱلۡقَيُّومُۚ لَا تَأۡخُذُهُۥ سِنَةٞ وَلَا نَوۡمٞۚ لَّهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ مَن ذَا ٱلَّذِي يَشۡفَعُ عِندَهُۥٓ إِلَّا بِإِذۡنِهِۦۚ يَعۡلَمُ مَا بَيۡنَ أَيۡدِيهِمۡ وَمَا خَلۡفَهُمۡۖ وَلَا يُحِيطُونَ بِشَيۡءٖ مِّنۡ عِلۡمِهِۦٓ إِلَّا بِمَا شَآءَۚ وَسِعَ كُرۡسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضَۖ وَلَايَئُودُهُۥ حِفۡظُهُمَاۚ وَهُوَ ٱلۡعَلِيُّ ٱلۡعَظِيمُ",
+          "للّٰهُ لَآ اِلٰهَ اِلَّا هُوَۚ اَلْحَيُّ الْقَيُّوْمُ ەۚ لَا تَأْخُذُهٗ سِنَةٌ وَّلَا نَوْمٌۗ لَهٗ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ مَنْ ذَا الَّذِيْ يَشْفَعُ عِنْدَهٗٓ اِلَّا بِاِذْنِهٖۗ يَعْلَمُ مَا بَيْنَ اَيْدِيْهِمْ وَمَا خَلْفَهُمْۚ وَلَا يُحِيْطُوْنَ بِشَيْءٍ مِّنْ عِلْمِهٖٓ اِلَّا بِمَا شَاۤءَۚ وَسِعَ كُرْسِيُّهُ السَّمٰوٰتِ وَالْاَرْضَۚ وَلَا يَـُٔوْدُهٗ حِفْظُهُمَاۚ وَهُوَ الْعَلِيُّ الْعَظِيْمُ ۝٢٥٥",
       "latin":
           "Alloohu laa ilaaha illa huwal hayyul qoyyuumu laa ta'khuzuhuu sinatuw walaa  naumun lahuu maa fissamaawaati wa maa fil ardhi man dzalladzii yasyfa'u  'indahu illa bi idznihi ya'lamu maa ba ina aidiihim wa maa kholfahum wa laa  yuhiithuuna bisyai-in min  'ilmihi illaa bi maa syaa -a wasi'a kursiyyuhus-samawaati wal ardhi wa laa yauuduhu hi fzuhuma wahuwal 'ali yyul 'azhiim.",
       "arti":
@@ -47,10 +46,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 5,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 256",
       "ayat": "256",
       "dzikir":
-          "لَآ إِكۡرَاهَ فِي ٱلدِّينِۖ قَد تَّبَيَّنَ ٱلرُّشۡدُ مِنَ ٱلۡغَيِّۚ فَمَن يَكۡفُرۡ بِٱلطَّٰغُوتِ وَيُؤۡمِنۢ بِٱللَّهِ فَقَدِ ٱسۡتَمۡسَكَ بِٱلۡعُرۡوَةِ ٱلۡوُثۡقَىٰ لَا ٱنفِصَامَ لَهَاۗ وَٱللَّهُ سَمِيعٌ عَلِيمٌ",
+          "لَآ اِكْرَاهَ فِى الدِّيْنِۗ قَدْ تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّۚ فَمَنْ يَّكْفُرْ بِالطَّاغُوْتِ وَيُؤْمِنْۢ بِاللّٰهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقٰى لَا انْفِصَامَ لَهَاۗ وَاللّٰهُ سَمِيْعٌ عَلِيْمٌ ۝٢٥٦",
       "latin":
           "La  ikroha fid-diini qot tabayyanar-rusydu minal ghoyyi famay yakfur bith-thooghuuti wa yu' minu billahi faqo dis tamsaka bil 'urwatil wutsqoo lan  fishooma laha wallohu samii'un aliim",
       "arti":
@@ -58,10 +57,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 6,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 257",
       "ayat": "257",
       "dzikir":
-          "ٱللَّهُ وَلِيُّ ٱلَّذِينَ ءَامَنُواْ يُخۡرِجُهُم مِّنَ ٱلظُّلُمَٰتِ إِلَى ٱلنُّورِۖ وَٱلَّذِينَ كَفَرُوٓاْ أَوۡلِيَآؤُهُمُ ٱلطَّٰغُوتُ يُخۡرِجُونَهُم مِّنَ ٱلنُّورِ إِلَى ٱلظُّلُمَٰتِۗ أُوْلَٰٓئِكَ أَصۡحَٰبُ ٱلنَّارِۖ هُمۡ فِيهَا خَٰلِدُونَ",
+          "اَللّٰهُ وَلِيُّ الَّذِيْنَ اٰمَنُوْا يُخْرِجُهُمْ مِّنَ الظُّلُمٰتِ اِلَى النُّوْرِۗ وَالَّذِيْنَ كَفَرُوْٓا اَوْلِيَاۤؤُهُمُ الطَّاغُوْتُ يُخْرِجُوْنَهُمْ مِّنَ النُّوْرِ اِلَى الظُّلُمٰتِۗ اُولٰۤىِٕكَ اَصْحٰبُ النَّارِۚ هُمْ فِيْهَا خٰلِدُوْنَࣖ ۝٢٥٧",
       "latin":
           "Allohu waliyyul ladziina aamanuu  yukhrijuhum minazh-zhulumaati ilan-n uuri walladziina kafaruu awliyaa-u  humuth-thooghutu yukhri-juunahum minan-nuuri ilazh-zhulumaati ulaa-ika  ash-haabun-naarihum fiihaa khooliduun",
       "arti":
@@ -69,10 +68,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 7,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 284",
       "ayat": "284",
       "dzikir":
-          "لِّلَّهِ مَا فِي ٱلسَّمَٰوَٰتِ وَمَا فِي ٱلۡأَرۡضِۗ وَإِن تُبۡدُواْ مَا فِيٓ أَنفُسِكُمۡ أَوۡ تُخۡفُوهُ يُحَاسِبۡكُم بِهِ ٱللَّهُۖ فَيَغۡفِرُ لِمَن يَشَآءُ وَيُعَذِّبُ مَن يَشَآءُۗ وَٱللَّهُ عَلَىٰ كُلِّ شَيۡءٖ قَدِيرٌ",
+          "لِلّٰهِ مَا فِى السَّمٰوٰتِ وَمَا فِى الْاَرْضِۗ وَاِنْ تُبْدُوْا مَا فِيْٓ اَنْفُسِكُمْ اَوْ تُخْفُوْهُ يُحَاسِبْكُمْ بِهِ اللّٰهُۗ فَيَغْفِرُ لِمَنْ يَّشَاۤءُ وَيُعَذِّبُ مَنْ يَّشَاۤءُۗ وَاللّٰهُ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ ۝٢٨٤",
       "latin":
           "Lillahi maa fis-samawaati wa maa fil ardhi wa in tubduu ma fii anfusikum aw  tukhfuuhu yuhaasibkum bi hillaahu fayaghfiru limay-yasyaa-u wa yu'adzibu  may-yasyaa-u wallohu 'alaa kulli syai-in  qodiir.",
       "arti":
@@ -80,10 +79,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 8,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 285",
       "ayat": "285",
       "dzikir":
-          "ءَامَنَ ٱلرَّسُولُ بِمَآ أُنزِلَ إِلَيۡهِ مِن رَّبِّهِۦ وَٱلۡمُؤۡمِنُونَۚ كُلٌّ ءَامَنَ بِٱللَّهِ وَمَلَٰٓئِكَتِهِۦ وَكُتُبِهِۦ وَرُسُلِهِۦ لَا نُفَرِّقُ بَيۡنَ أَحَدٖ مِّن رُّسُلِهِۦۚ وَقَالُواْ سَمِعۡنَا وَأَطَعۡنَاۖ غُفۡرَانَكَ رَبَّنَا وَإِلَيۡكَ ٱلۡمَصِيرُ",
+          "اٰمَنَ الرَّسُوْلُ بِمَآ اُنْزِلَ اِلَيْهِ مِنْ رَّبِّهٖ وَالْمُؤْمِنُوْنَۗ كُلٌّ اٰمَنَ بِاللّٰهِ وَمَلٰۤىِٕكَتِهٖ وَكُتُبِهٖ وَرُسُلِهٖۗ لَا نُفَرِّقُ بَيْنَ اَحَدٍ مِّنْ رُّسُلِهٖۗ وَقَالُوْا سَمِعْنَا وَاَطَعْنَا غُفْرَانَكَ رَبَّنَا وَاِلَيْكَ الْمَصِيْرُ ۝٢٨٥",
       "latin":
           "Aamanar rosuulu bima unzila ilaihi mir-robbihi wal mu'minuuna kulluna aamana billahi wa malaaikatihi wa kutubihi wa rusulihi laa nufarriqu baina ahadim-mir-rusulihi waqoluu sami'na wa atho'naa ghufronaka robbana wa ilaikal-mashiiru.",
       "arti":
@@ -91,10 +90,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 9,
-      "surah": "al-baqarah",
+      "surah": "Surah Al-Baqarah ayat 286",
       "ayat": "286",
       "dzikir":
-          "لَا يُكَلِّفُ ٱللَّهُ نَفۡسًا إِلَّا وُسۡعَهَاۚ لَهَا مَا كَسَبَتۡ وَعَلَيۡهَا مَا ٱكۡتَسَبَتۡۗ رَبَّنَا لَا تُؤَاخِذۡنَآ إِن نَّسِينَآ أَوۡ أَخۡطَأۡنَاۚ رَبَّنَا وَلَا تَحۡمِلۡ عَلَيۡنَآ إِصۡرٗا كَمَا حَمَلۡتَهُۥ عَلَى ٱلَّذِينَ مِن قَبۡلِنَاۚ رَبَّنَا وَلَا تُحَمِّلۡنَا مَا لَا طَاقَةَ لَنَا بِهِۦۖ وَٱعۡفُ عَنَّا وَٱغۡفِرۡ لَنَا وَٱرۡحَمۡنَآۚ أَنتَ مَوۡلَىٰنَا فَٱنصُرۡنَا عَلَى ٱلۡقَوۡمِ ٱلۡكَٰفِرِينَ",
+          "لَا يُكَلِّفُ اللّٰهُ نَفْسًا اِلَّا وُسْعَهَاۗ لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْۗ رَبَّنَا لَا تُؤَاخِذْنَآ اِنْ نَّسِيْنَآ اَوْ اَخْطَأْنَاۚ رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَآ اِصْرًا كَمَا حَمَلْتَهٗ عَلَى الَّذِيْنَ مِنْ قَبْلِنَاۚ رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهٖۚ وَاعْفُ عَنَّاۗ وَاغْفِرْ لَنَاۗ وَارْحَمْنَاۗ اَنْتَ مَوْلٰىنَا فَانْصُرْنَا عَلَى الْقَوْمِ الْكٰفِرِيْنَࣖ ۝٢٨٦",
       "latin":
           "Laa yukallifullohu  nafsan illa wus'ahaa lahaa maa kasaba t wa 'alaiha maktasabat, robbana laa  tuaakhidznaa in nasiina aw akhtho'naa, robbana walaa tahmil 'alainaa ishron  kama hamaltahu 'alal-ladziina min qobl inaa, robbana wa laa tuhammilnaa maa  laa thooqotalanaa bihi wa'fu 'annaa waghfirlanaa warhamnaa anta maulaanaa  fanshurnaa 'alal-qoumil-kaafiriin",
       "arti":
@@ -102,10 +101,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 10,
-      "surah": "al-ikhlas",
+      "surah": "Surah Al-Ikhlas",
       "ayat": "1-4",
       "dzikir":
-          "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ= قُلۡ هُوَ ٱللَّهُ أَحَدٌ ١ ٱللَّهُ ٱلصَّمَدُ ٢ لَمۡ يَلِدۡ وَلَمۡ يُولَ ٣ وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ ٤",
+          "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ -- قُلْ هُوَ اللّٰهُ اَحَدٌۚ ۝١ اَللّٰهُ الصَّمَدُۚ ۝٢ لَمْ يَلِدْ وَلَمْ يُوْلَدْۙ ۝٣ وَلَمْ يَكُنْ لَّهٗ كُفُوًا اَحَدٌࣖ ۝٤",
       "latin":
           "Bismillaahir-rohmaanir-rohiim. Qul huwalloohu ahad. Alloohush-shomad.  Lam yalid walam yuulad. Walam ya kul-lahuu kufuwan ahad.",
       "arti":
@@ -113,10 +112,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 11,
-      "surah": "al-falaq",
+      "surah": "Surah Al-Falaq",
       "ayat": "1-5",
       "dzikir":
-          " بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ = قُلۡ أَعُوذُ بِرَبِّ ٱلۡفَلَقِ ١ مِن شَرِّ مَا خَلَقَ ٢ وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ ٣ وَمِن شَرِّ ٱلنَّفَّٰثَٰتِ فِي ٱلۡعُقَدِ ٤ وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ ٥",
+          "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ -- قُلْ اَعُوْذُ بِرَبِّ الْفَلَقِۙ ۝١ مِنْ شَرِّ مَا خَلَقَۙ ۝٢ وَمِنْ شَرِّ غَاسِقٍ اِذَا وَقَبَۙ ۝٣ وَمِنْ شَرِّ النَّفّٰثٰتِ فِى الْعُقَدِۙ ۝٤ وَمِنْ شَرِّ حَاسِدٍ اِذَا حَسَدَࣖ ۝٥",
       "latin":
           "Bismillaahir-rohmaanir-rohiim. Qul a'uudzu birobbil-falaq. Min syarri maa  kholaq. Wamin syarri ghoosiqin idzaa waqob. Wamin Syarrin-naffaatsaati fil-'uqod. Wamin syarri haas idin idzaa hasad.",
       "arti":
@@ -124,10 +123,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 12,
-      "surah": "an-nas",
+      "surah": "Surah An-Naas",
       "ayat": "1-6",
       "dzikir":
-          "بِسۡمِ ٱللَّهِ ٱلرَّحۡمَٰنِ ٱلرَّحِيمِ = قُلْ أَعُوذُ بِرَبِّ ٱلنَّاسِ ١ مَلِكِ ٱلنَّاسِ ٢ إِلَـٰهِ ٱلنَّاسِ ٣ مِن شَرِّ ٱلْوَسْوَاسِ ٱلْخَنَّاسِ ٤ ٱلَّذِى يُوَسْوِسُ فِى صُدُورِ ٱلنَّاسِ ٥ مِنَ ٱلْجِنَّةِ وَٱلنَّاسِ ٦",
+          "بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ -- قُلْ اَعُوْذُ بِرَبِّ النَّاسِۙ ۝١ مَلِكِ النَّاسِۙ ۝٢ اِلٰهِ النَّاسِۙ ۝٣ مِنْ شَرِّ الْوَسْوَاسِ ەۙ الْخَنَّاسِۖ ۝٤ الَّذِيْ يُوَسْوِسُ فِيْ صُدُوْرِ النَّاسِۙ ۝٥ مِنَ الْجِنَّةِ وَالنَّاسِࣖ ۝٦",
       "latin":
           "Bismillaahir-rohmaanir-rohiim. Qul a'uudzu birobbin-naas. Malikin-naas.  Ilaahin-naas. Minsyarril-waswaasil-k hon-naas. Alladzii yuwaswisu fii  shuduurin-naas. Minal-jinnati wan-naas",
       "arti":
@@ -135,7 +134,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 13,
-      "surah": "doa al-matsurat petang",
+      "surah": "Doa Al-Matsurat Petang",
       "ayat": "1",
       "dzikir":
           "أَمْسَيْنَا وَ أَمْسَ الْمُلْكُ لِلَّهِ وَلْحَمْدُ لِلهِ لَا شَرِيْكَ لَهُ لَا إِلَهَ إِلَّاهُوَ وَإِلَيْهِ الْمَصِيْرُ",
@@ -146,7 +145,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 14,
-      "surah": "doa al-matsurat petang",
+      "surah": "Doa Al-Matsurat Petang",
       "ayat": "2",
       "dzikir":
           "أَمْسَيْنَا عَلَى فِطْرَةِ اْلإِسْلاَمِ وَعَلَى كَلِمَةِ اْلإِخْلاَصِ وَعَلَى دِيْنِ نَبِيِّنَا مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ وَعَلَى مِلَّةِ أَبِيْنَا إِبْرَاهِيْمَ حَنِيْفًا مُسْلِمًا وَمَا كَانَ مِنَ الْمُشْرِكِيْنَ",
@@ -157,7 +156,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 15,
-      "surah": "doa al-matsurat petang",
+      "surah": "Doa Al-Matsurat Petang",
       "ayat": "3",
       "dzikir":
           "اللَّهُمَّ إِنِّي أَمْسَيتُ مِنْكَ فِي نِعْمَةٍ وَعَافِيَةٍ وَسِتْر فَأَتِمَّ عَلَيَّ نِعْمَتَكَ وَعَافِيَتَكَ وَسِتْرَكَ فِي الدُّنْيَا وَالآخِرَة",
@@ -168,7 +167,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 16,
-      "surah": "doa al-matsurat petang",
+      "surah": "Doa Al-Matsurat Petang",
       "ayat": "4",
       "dzikir":
           "اللَّهُمَّ مَا أَمْسَ بِيْ مِنْ نِعْمَةٍ أَوْ بِأَحَدٍ مِنْ خَلْقِكَ فَمِنْكَ وَحْدَكَ لاَ شَرِيْكَ لَكَ فَلَكَ الْحَمْدُ وَلَكَ الشُّكْرُ",
@@ -179,7 +178,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 17,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "1",
       "dzikir":
           "يَا رَبِّي لَكَ الْحَمْدُ كَمَا يَنْبَغِي لِجَلَالِ وَجْهِكَ وَلِعَظِيمِ سُلْطَانِكَ",
@@ -190,7 +189,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 18,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "2",
       "dzikir":
           "رَضِيتُ بِاللَّهِ رَبًّا وَبِالْإِسْلَامِ دِينًا وَبِمُحَمَّدٍ نَبِيًّا وَرَسُولًا",
@@ -201,7 +200,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 19,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "3",
       "dzikir":
           "سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ",
@@ -212,7 +211,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 20,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "4",
       "dzikir":
           "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ",
@@ -223,7 +222,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 21,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "5",
       "dzikir":
           "اللَّهُمَّ إِنَّا نَعُوذُ بِكَ مِنْ أَنْ نُشْرِكَ بِكَ شَيْئًا نَعْلَمُهُ وَنَسْتَغْفِرُكَ لِمَا لَا نَعْلَمُه",
@@ -234,7 +233,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 22,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "6",
       "dzikir":
           "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
@@ -244,7 +243,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 23,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "7",
       "dzikir":
           "للَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الهَمِّ وَالْحَزَنِ وَأَعُوْذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ وَأَعُوْذُ بِكَ مِنَ الْجُبْنِ وَالبُخْلِ وَأَعُوْذُ بِكَ مِنْ غَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ",
@@ -255,7 +254,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 24,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "8",
       "dzikir":
           "اَللَّهُمَّ عَافِنِي فِي بَدَنِي اَللَّهُمَّ عَافِنِي فِي سَمْعِي اَللَّهُمَّ عَافِنِي فِي بَصَرِي",
@@ -266,7 +265,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 25,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "9",
       "dzikir":
           "اَللَّهُمَّ إِنِّي أَعُوْذُ بِكَ مِنَ الْكُفْرِ وَالْفَقْرِوَأَعُوْذُ بِكَ مِنْ عَذَابِ الْقَبْرِلاَ إِلهَ إِلاَّ أَنْتَ",
@@ -277,7 +276,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 26,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "10",
       "dzikir":
           "اَللّهُمَّ أَنْتَ رَبِّي لَا إلهَ إِلاَّ أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ أَعُوْذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ أَبُوْءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوْءُ بِذَنْبِي فَاغْفِرْ لِي فَإِنَّهُ لاَ يَغْفِرُ الذُّنُوْبَ إِلاَّ أَنْتَ",
@@ -288,7 +287,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 27,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "11",
       "dzikir":
           "أَسْتَغْفِرُ اللَّهَ الْعَظِيمَ الَّذِي لَا إلهَ إِلَّا هُوَ الْحَيَّ الْقَيُّومَ وَأَتُوبُ إِلَيْهِ",
@@ -299,7 +298,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 28,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "12",
       "dzikir":
           "اَللّهُمَّ صَلِّ عَلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا صَلَّــيْتَ عَـلَى سَيِّدِنَا إِبْرَاهِيْمَ وَعَلَى آلِ سَيِّدِنَا إِبْـرَاهِيْمَ وبَارِكْ عَـلَى سَيِّدِنَا مُحَمَّدٍ وَعَلَى آلِ سَيِّدِنَا مُحَمَّدٍ كَمَا بَارَكْتَ عَـلَى سَيِّدِنَا إِبْرَاهِيْمَ وَعَــلَى آلِ سَيـِّدِنَا إِبْـرَاهِيْمَ فِي الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ",
@@ -310,7 +309,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 29,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "13",
       "dzikir":
           "سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ",
@@ -321,7 +320,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 30,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "14",
       "dzikir":
           "لَا إِلَهَ إِلَّا اللهُ وَحْدَهُ لَا شَرِكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَىْ كُلِّ شَيْءٍ قَدِيْرٌ",
@@ -332,7 +331,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 31,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "15",
       "dzikir":
           "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَشْهَدُ أَنْ لَّا إلهَ إِلَّا أَنْتَ أَسْتَغْفِرُكَ وَأَتُوْبُ إِلَيْكَ",
@@ -343,7 +342,7 @@ Map<String, dynamic> response = {
     },
     {
       "no": 32,
-      "surah": "doa al-matsurat",
+      "surah": "Doa Al-Matsurat",
       "ayat": "16",
       "dzikir":
           "اَلَّلهُمَّ صَلِّى عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُوْلِكَ النَّبِىِّ الْأُمِّىِّ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلِّمْ تَسْلِمًا عَدَدَمَا أَحَدَ بِهِ عِلْمُكَ وَخَطَّ بِهِ قَلَمُكَ وَأَخْصَاهُ كِتَابُكَ وَارْضَ الَّلهُمَّ عَنْ سَدَاتِنَا أَبِى بَكْرٍ وَعُمَرَ وَعُثْمَانَ وَعَلِيٍّ وَعَنِ الصَّحَابَةِ أَجْمَعِيْنَ وَعَنْ التَّابِعِيْنَ وَتَابِعِيْهِمْ بِإِحْسَانٍ إِلَى يَوْمِ الدِّيْنِ",
@@ -354,10 +353,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 33,
-      "surah": "Ash-Shaffat",
+      "surah": "Surah Ash-Shaffat ayat 180-182",
       "ayat": "180-182",
       "dzikir":
-          "سُبْحَانَكَ رَبِّكَ رَبِّ الْعِزَّتِ عَمَّا يَصِفُوْنَ وَسَلَّامُ عَلَى الْمُرْسَلِيْنَ وَالْحَمْدُ لِلهِ رَبِّ الْعَالَمِيْنَ",
+          "سُبْحٰنَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَۚ ۝١٨٠ وَسَلٰمٌ عَلَى الْمُرْسَلِيْنَۚ ۝١٨١ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَࣖ ۝١٨٢",
       "latin":
           "sub-ḫâna rabbika rabbil-‘izzati ‘ammâ yashifûn. wa salâmun ‘alal-mursalîn. wal-ḫamdu lillâhi rabbil-‘âlamîn. ",
       "arti":
@@ -365,10 +364,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 34,
-      "surah": "Ali-Imran",
+      "surah": "Surah Ali-Imran ayat 26",
       "ayat": "26",
       "dzikir":
-          "قُلِ ٱللَّهُمَّ مَٰلِكَ ٱلۡمُلۡكِ تُؤۡتِي ٱلۡمُلۡكَ مَن تَشَآءُ وَتَنزِعُ ٱلۡمُلۡكَ مِمَّن تَشَآءُ وَتُعِزُّ مَن تَشَآءُ وَتُذِلُّ مَن تَشَآءُۖ بِيَدِكَ ٱلۡخَيۡرُۖ إِنَّكَ عَلَىٰ كُلِّ شَيۡءٖ قَدِيرٞ",
+          "قُلِ اللّٰهُمَّ مٰلِكَ الْمُلْكِ تُؤْتِى الْمُلْكَ مَنْ تَشَاۤءُ وَتَنْزِعُ الْمُلْكَ مِمَّنْ تَشَاۤءُۖ وَتُعِزُّ مَنْ تَشَاۤءُ وَتُذِلُّ مَنْ تَشَاۤءُۗ بِيَدِكَ الْخَيْرُۗ اِنَّكَ عَلٰى كُلِّ شَيْءٍ قَدِيْرٌ ۝٢٦",
       "latin":
           "qulillâhumma mâlikal-mulki tu'til-mulka man tasyâ'u wa tanzi‘ul-mulka mim man tasyâ'u wa tu‘izzu man tasyâ'u wa tudzillu man tasyâ', biyadikal-khaîr, innaka ‘alâ kulli syai'ing qadîr",
       "arti":
@@ -376,10 +375,10 @@ Map<String, dynamic> response = {
     },
     {
       "no": 35,
-      "surah": "Ali-Imran",
+      "surah": "Surah Ali-Imran ayat 27",
       "ayat": "27",
       "dzikir":
-          "تُولِجُ ٱلَّيۡلَ فِي ٱلنَّهَارِ وَتُولِجُ ٱلنَّهَارَ فِي ٱلَّيۡلِۖ وَتُخۡرِجُ ٱلۡحَيَّ مِنَ ٱلۡمَيِّتِ وَتُخۡرِجُ ٱلۡمَيِّتَ مِنَ ٱلۡحَيِّۖ وَتَرۡزُقُ مَن تَشَآءُ بِغَيۡرِ حِسَابٖ",
+          "تُوْلِجُ الَّيْلَ فِى النَّهَارِ وَتُوْلِجُ النَّهَارَ فِى الَّيْلِ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَتَرْزُقُ مَنْ تَشَاۤءُ بِغَيْرِ حِسَابٍ ۝٢٧",
       "latin":
           "tûlijul-laila fin-nahâri wa tûlijun-nahâra fil-laili wa tukhrijul-ḫayya minal-mayyiti wa tukhrijul-mayyita minal-ḫayyi wa tarzuqu man tasyâ'u bighairi ḫisâb",
       "arti":
