@@ -38,6 +38,7 @@ dependencies:
   equatable: ^2.0.7
   flutter_bloc: ^8.1.6
   bloc: ^8.1.4
+  flutter_launcher_icons: ^0.14.2
 
 dev_dependencies:
   flutter_test:
@@ -49,6 +50,15 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^4.0.0
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  remove_alpha_ios: true
+  image_path: "assets/icon/icon_app.png"
+  adaptive_icon_background: '#ffffff'
+  adaptive_icon_foreground: 'assets/icon/icon_app.png'
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -71,6 +81,7 @@ flutter:
     - assets/icon/sun_2.png
     - assets/icon/home_2.png
     - assets/icon/sun3.png
+    - assets/icon/icon_app.png
     # D:\apk_almatsurat_folder\my_app\assets\icon\sun_ligthts.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
