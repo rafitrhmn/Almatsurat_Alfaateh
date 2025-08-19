@@ -1,7 +1,6 @@
 import 'package:apk_almatsurat/bloc/dzikir_bloc.dart';
 import 'package:apk_almatsurat/bloc/obsaver_bloc.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'screen/home.dart';
 import 'package:flutter/material.dart';
 // Assuming the data is stored in a file called data.dart
