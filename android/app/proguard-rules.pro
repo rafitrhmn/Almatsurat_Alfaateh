@@ -1,38 +1,69 @@
-# Flutter Wrapper
--keep class io.flutter.app.** { *; }
--keep class io.flutter.plugin.**  { *; }
--keep class io.flutter.util.**  { *; }
--keep class io.flutter.view.**  { *; }
--keep class io.flutter.**  { *; }
--keep class io.flutter.plugins.**  { *; }
+# ===========================
+# FLUTTER CORE
+# ===========================
+-keep class io.flutter.** { *; }
+-keep class io.flutter.plugins.** { *; }
+-dontwarn io.flutter.**
 
-# Google Play Core (untuk mengatasi error missing classes)
--keep class com.google.android.play.core.** { *; }
--dontwarn com.google.android.play.core.**
-
-# Google Play Services
--keep class com.google.android.gms.** { *; }
--dontwarn com.google.android.gms.**
-
-# Kotlin
+# ===========================
+# KOTLIN
+# ===========================
 -keep class kotlin.** { *; }
 -keep class kotlin.Metadata { *; }
 -dontwarn kotlin.**
 -keepclassmembers class **$WhenMappings {
     <fields>;
 }
+-keepclassmembers class kotlin.Metadata {
+    public <methods>;
+}
 
-# Gson (jika digunakan)
+# ===========================
+# FLUTTER BLOC & EQUATABLE
+# ===========================
+-keep class com.example.** { *; }
+-keepclassmembers class * extends java.lang.Enum {
+    <fields>;
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+# ===========================
+# SHARED PREFERENCES
+# ===========================
+-keep class androidx.datastore.** { *; }
+-dontwarn androidx.datastore.**
+
+# ===========================
+# GOOGLE PLAY CORE & SERVICES
+# ===========================
+-keep class com.google.android.play.core.** { *; }
+-dontwarn com.google.android.play.core.**
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+
+# ===========================
+# FLUTTER LOCAL NOTIFICATIONS
+# (persiapan Tahap 3)
+# ===========================
+-keep class com.dexterous.** { *; }
+-dontwarn com.dexterous.**
+
+# ===========================
+# ANNOTATIONS & SIGNATURES
+# (wajib untuk reflection)
+# ===========================
 -keepattributes Signature
 -keepattributes *Annotation*
+-keepattributes EnclosingMethod
+-keepattributes InnerClasses
 -dontwarn sun.misc.**
--keep class com.google.gson.** { *; }
--keep class * extends com.google.gson.TypeAdapter
--keep class * implements com.google.gson.TypeAdapterFactory
--keep class * implements com.google.gson.JsonSerializer
--keep class * implements com.google.gson.JsonDeserializer
 
-# Mencegah obfuscation pada class model
--keepclassmembers,allowobfuscation class * {
-  @com.google.gson.annotations.SerializedName <fields>;
+# ===========================
+# MODEL CLASS PROTECTION
+# mencegah obfuscation field model
+# ===========================
+-keepclassmembers class com.apk_almatsurat.** {
+    <fields>;
+    <methods>;
 }

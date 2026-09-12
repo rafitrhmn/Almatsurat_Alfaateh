@@ -1,7 +1,11 @@
-Map<String, dynamic> response = {
-  "status": "success",
-  "message": "Al-Matsurat Pagi Sugro",
-  "data": [
+import '../models/dzikir_model.dart';
+
+class DzikirRepository {
+  // =====================
+  // DATA SUMBER UTAMA
+  // =====================
+  static const List<Map<String, dynamic>> _rawData = [
+    // paste data dari data_sugro.dart di sini
     {
       "no": 1,
       "kategori": "Umum",
@@ -9,12 +13,10 @@ Map<String, dynamic> response = {
       "ayat": "1",
       "dibaca": "1",
       "dzikir": "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
-      "latin": "A'udzubillaahis samii'il 'aliimi minassyaithoonirrojiim",
-      "arti":
-          "Aku berlindung kepada Allah yang Maha Mendengar lagi Maha Mengetahui dari godaan syetan yang terkutuk.",
-      "keutamaan":
-          "Keutamaan Membaca Ta'awudz\n\n1. **Meredakan Emosi**\nTa'awudz dapat meredam amarah yang dipicu oleh bisikan setan. Rasulullah SAW mengajarkan untuk membaca 'A'udzu billahi minasy-syaithanir rajim' saat marah agar terhindar dari godaan setan.\n\n2. **Menghilangkan Was-was & Cemas**\nSetan sering mengganggu manusia saat beribadah, khususnya salat, dengan menimbulkan rasa cemas dan was-was. Membaca ta'awudz membantu menjaga kekhusyukan dalam ibadah.\n\n3. **Melindungi dari Godaan Setan**\nMembaca ta'awudz sebelum membaca Al-Qur'an membantu hati lebih fokus dalam memahami maknanya dan terhindar dari kelalaian.\n\n4. **Mensucikan Lisan**\nTa'awudz membersihkan lisan dari perkataan sia-sia, ghibah, dan kebohongan, sehingga saat membaca Al-Qur'an, lidah dalam keadaan suci.\n\nDengan membaca ta'awudz, kita mengakui kelemahan sebagai hamba Allah dan memohon perlindungan dari setan yang menyesatkan."
+      "latin": "A'udzubillaahis samii'il...",
+      "arti": "Aku berlindung kepada Allah...",
     },
+
     {
       "no": 2,
       "surah": "Surah Al-Fatihah",
@@ -41,6 +43,7 @@ Map<String, dynamic> response = {
       "arti":
           '(1) Alif Laam Miim. (2) Kitab (Al Qur’an) ini tidak ada keraguan padanya; petunjuk bagi mereka yang bertaqwa, (3) (yaitu) mereka yang beriman kepada yang gaib, yang mendirikan shalat dan menafkahkan sebahagian rezki yang Kami anugerahkan kepada mereka, (4) dan mereka yang beriman kepada Kitab (Al Qur’an) yang telah diturunkan kepadamu dan Kitab-kitab yang telah diturunkan sebelummu, serta mereka yakin akan adanya (kehidupan) akhirat. (5) Mereka itulah yang tetap mendapat petunjuk dari Tuhan mereka, dan merekalah orang-orang yang beruntung.',
     },
+
     {
       "no": 4,
       'kategori': 'Umum',
@@ -121,149 +124,6 @@ Map<String, dynamic> response = {
     },
     {
       "no": 10,
-      "kategori": "Petang",
-      "surah": "Surah Ali-Imran ayat 1-2",
-      "ayat": "1-2",
-      "dibaca": "1",
-      "dzikir":
-          "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ -- الٓمٓ ۝١ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۝٢",
-      "latin":
-          "Laa yukallifullohu nafsan illa wus'ahaa lahaa maa kasabat wa 'alaiha maktasabat, robbana laa tuaakhidznaa in nasiina aw akhtho'naa, robbana walaa tahmil 'alainaa ishron kama hamaltahu 'alal-ladziina min qoblinaa, robbana wa laa tuhammilnaa maa laa thooqotalanaa bihi wa'fu 'annaa waghfirlanaa warhamnaa anta maulaanaa fanshurnaa 'alal-qoumil-kaafiriin",
-      "arti":
-          "Allah tidak membebani seseorang melainkan sesuai dengan kesanggupannya. Ia mendapat pahala (dari kebajikan) yang diusahakannya dan ia mendapat siksa (dari kejahatan) yang dikerjakannya. (Mereka berdo`a): \"Ya Tuhan kami, janganlah Engkau hukum kami jika kami lupa atau kami tersalah. Ya Tuhan kami, janganlah Engkau bebankan kepada kami beban yang berat sebagaimana Engkau bebankan kepada orang-orang yang sebelum kami. Ya Tuhan kami, janganlah Engkau pikulkan kepada kami apa yang tak sanggup kami memikulnya. Beri maaflah kami; ampunilah kami; dan rahmatilah kami. Engkaulah Penolong kami, maka tolonglah kami terhadap kaum yang kafir.\""
-    },
-    {
-      "no": 11,
-      "kategori": "Petang",
-      "surah": "Surah Thaha ayat 111-112",
-      "ayat": "111-112",
-      "dibaca": "1",
-      "dzikir":
-          "وَعَنَتِ ٱلۡوُجُوهُ لِلۡحَيِّ ٱلۡقَيُّومِۖ وَقَدۡ خَابَ مَنۡ حَمَلَ ظُلۡمٗا ۝١١١ وَمَن يَعۡمَلۡ مِنَ ٱلصَّٰلِحَٰتِ وَهُوَ مُؤۡمِنٞ فَلَا يَخَافُ ظُلۡمٗا وَلَا هَضۡمٗا ۝١١٢",
-      "latin":
-          "Wa ‘anat il-wujuuhu lil-hayyil qoyyuum, wa qad khaaba man hamala zulma. Wa man ya‘mal minas-soolihaati wa huwa mu’min, falaa yakhaafu zulma wa laa hadma.",
-      "arti":
-          "\"Dan semua wajah tunduk di hadapan Tuhan Yang Hidup, Yang Berdiri Sendiri. Sungguh rugi orang yang memikul dosa kezaliman. Dan barang siapa mengerjakan kebajikan, sedang dia beriman, maka dia tidak akan takut diperlakukan zalim (terhadapnya) dan tidak (pula takut) akan pengurangan haknya.\""
-    },
-    {
-      "no": 12,
-      "kategori": "Petang",
-      "surah": "Surah At-Taubah ayat 129",
-      "ayat": "129",
-      "dibaca": "7",
-      "dzikir":
-          "حَسۡبِيَ ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَۖ عَلَيۡهِ تَوَكَّلۡتُۖ وَهُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡعَظِيمِ ۝١٢٩",
-      "latin":
-          "Hasbiyallahu laa ilaaha illaa huwa, ‘alayhi tawakkaltu wa huwa rabbul-‘arshil-‘azheem.",
-      "arti":
-          "\"Cukuplah Allah bagiku. Tidak ada Tuhan selain Dia. Hanya kepada-Nya aku bertawakal, dan Dia adalah Tuhan yang memiliki 'Arsy yang agung.\""
-    },
-    {
-      "no": 13,
-      "kategori": "Petang",
-      "surah": "Surah Al-Isra ayat 110-111",
-      "ayat": "110-111",
-      "dibaca": "1",
-      "dzikir":
-          "قُلِ ٱدۡعُواْ ٱللَّهَ أَوِ ٱدۡعُواْ ٱلرَّحۡمَٰنَۖ أَيّٗا مَّا تَدۡعُواْ فَلَهُ ٱلۡأَسۡمَآءُ ٱلۡحُسۡنَىٰۚ وَلَا تَجۡهَرۡ بِصَلَاتِكَ وَلَا تُخَافِتۡ بِهَا وَٱبۡتَغِ بَيۡنَ ذَٰلِكَ سَبِيلٗا ۝١١٠ وَقُلِ ٱلۡحَمۡدُ لِلَّهِ ٱلَّذِي لَمۡ يَتَّخِذۡ وَلَدٗا وَلَمۡ يَكُن لَّهُۥ شَرِيكٞ فِي ٱلۡمُلۡكِ وَلَمۡ يَكُن لَّهُۥ وَلِيّٞ مِّنَ ٱلذُّلِّۖ وَكَبِّرۡهُ تَكۡبِيرَۢا ۝١١١",
-      "latin":
-          "Qulid'ʿullāha awid'ʿur-raḥmān, ayyamā tad'ʿū falahul-asmāaul-ḥusná, wa lā taj'har biṣalātika wa lā tukhāfit bihā wabtaghi bayna dhālika sabīlā ۝١١٠ -- Wa quli al-ḥamdu lillāhil-ladhī lam yattakhidh waladāw wa lam yakun lahu sharīkun fil-mulki wa lam yakun lahu waliyyum-minadh-dhulli wa kabbir'hu takbīrā ۝١١١",
-      "arti":
-          "Katakanlah: 'Serulah Allah atau serulah Ar-Rahman. Dengan nama apapun kamu menyeru, maka bagi-Nya nama-nama yang terbaik (Asmaul Husna). Janganlah kamu mengeraskan suaramu dalam shalat dan janganlah pula merendahkannya, dan carilah jalan tengah di antara keduanya.' (110) -- Dan katakanlah: 'Segala puji bagi Allah yang tidak mempunyai anak dan tidak mempunyai sekutu dalam kerajaan-Nya, serta tidak memerlukan penolong karena kelemahan-Nya, dan agungkanlah Dia dengan pengagungan yang sebesar-besarnya.' (111)"
-    },
-    {
-      "no": 14,
-      "kategori": "Petang",
-      "surah": "Surah Al-Mu’minun ayat 115-118",
-      "ayat": "115-118",
-      "dibaca": "1",
-      "dzikir":
-          "أَفَحَسِبۡتُمۡ أَنَّمَا خَلَقۡنَٰكُمۡ عَبَثٗا وَأَنَّكُمۡ إِلَيۡنَا لَا تُرۡجَعُونَ ۝١١٥ فَتَعَٰلَى ٱللَّهُ ٱلۡمَلِكُ ٱلۡحَقُّۖ لَآ إِلَٰهَ إِلَّا هُوَ رَبُّ ٱلۡعَرۡشِ ٱلۡكَرِيمِ ۝١١٦ وَمَن يَدۡعُ مَعَ ٱللَّهِ إِلَٰهًا ءَاخَرَ لَا بُرۡهَٰنَ لَهُۥ بِهِۦ فَإِنَّمَا حِسَابُهُۥ عِندَ رَبِّهِۦٓۚ إِنَّهُۥ لَا يُفۡلِحُ ٱلۡكَٰفِرُونَ ۝١١٧ وَقُل رَّبِّ ٱغۡفِرۡ وَٱرۡحَمۡ وَأَنتَ خَيۡرُ ٱلرَّٰحِمِينَ ۝١١٨",
-      "latin":
-          "Afahasibtum annamā khalaqnākum 'abathan wa annakum ilaynā lā turja'ūn ۝١١٥ Fata'ālāllāhul-malikul-ḥaqqu lā ilāha illā huwa rabbul-‘arshil-karīm ۝١١٦ Wa man yad'ʿu maʿallāhi ilāhan ākhar lā bur'hāna lahu bihī fa innamā ḥisābuhu ‘inda rabbih, innahu lā yuf'liḥul-kāfirūn ۝١١٧ Wa qul rabbi ghfir warḥam wa anta khayrur-rāḥimīn ۝١١٨",
-      "arti":
-          "'Maka apakah kamu mengira bahwa Kami menciptakan kamu secara main-main (tanpa tujuan) dan bahwa kamu tidak akan dikembalikan kepada Kami?' (115) Maka Maha Tinggi Allah, Raja yang sebenarnya; tidak ada Tuhan selain Dia, Tuhan (yang memiliki) ‘Arsy yang mulia. (116) Dan barang siapa menyembah sembahan lain selain Allah tanpa ada bukti yang jelas baginya, maka perhitungannya di sisi Tuhannya. Sesungguhnya orang-orang kafir itu tidak akan beruntung. (117) Dan katakanlah: 'Ya Tuhanku, ampunilah dan rahmatilah, dan Engkau adalah sebaik-baik Pemberi rahmat.' (118)"
-    },
-    {
-      "no": 15,
-      "kategori": "Petang",
-      "surah": "Surah Ar-Rum ayat 17-26",
-      "ayat": "17-26",
-      "dibaca": "1",
-      "dzikir":
-          "فَسُبۡحَٰنَ ٱللَّهِ حِينَ تُمۡسُونَ وَحِينَ تُصۡبِحُونَ ۝١٧ وَلَهُ ٱلۡحَمۡدُ فِي ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَعَشِيّٗا وَحِينَ تُظۡهِرُونَ ۝١٨ يُخۡرِجُ ٱلۡحَيَّ مِنَ ٱلۡمَيِّتِ وَيُخۡرِجُ ٱلۡمَيِّتَ مِنَ ٱلۡحَيِّ وَيُحۡيِ ٱلۡأَرۡضَ بَعۡدَ مَوۡتِهَاۚ وَكَذَٰلِكَ تُخۡرَجُونَ ۝١٩ وَمِنۡ ءَايَٰتِهِۦٓ أَنۡ خَلَقَكُم مِّن تُرَابٖ ثُمَّ إِذَآ أَنتُم بَشَرٞ تَنتَشِرُونَ ۝٢٠ وَمِنۡ ءَايَٰتِهِۦٓ أَنۡ خَلَقَ لَكُم مِّنۡ أَنفُسِكُمۡ أَزۡوَٰجٗا لِّتَسۡكُنُوٓاْ إِلَيۡهَا وَجَعَلَ بَيۡنَكُم مَّوَدَّةٗ وَرَحۡمَةًۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّقَوۡمٖ يَتَفَكَّرُونَ ۝٢١ وَمِنۡ ءَايَٰتِهِۦ خَلۡقُ ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِ وَٱخۡتِلَٰفُ أَلۡسِنَتِكُمۡ وَأَلۡوَٰنِكُمۡۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّلۡعَٰلِمِينَ ۝٢٢ وَمِنۡ ءَايَٰتِهِۦ مَنَامُكُم بِٱلَّيۡلِ وَٱلنَّهَارِ وَٱبۡتِغَآؤُكُم مِّن فَضۡلِهِۦٓۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّقَوۡمٖ يَسۡمَعُونَ ۝٢٣ وَمِنۡ ءَايَٰتِهِۦ يُرِيكُمُ ٱلۡبَرۡقَ خَوۡفٗا وَطَمَعٗا وَيُنَزِّلُ مِنَ ٱلسَّمَآءِ مَآءٗ فَيُحۡيِۦ بِهِ ٱلۡأَرۡضَ بَعۡدَ مَوۡتِهَآۚ إِنَّ فِي ذَٰلِكَ لَأٓيَٰتٖ لِّقَوۡمٖ يَعۡقِلُونَ ۝٢٤ وَمِنۡ ءَايَٰتِهِۦٓ أَن تَقُومَ ٱلسَّمَآءُ وَٱلۡأَرۡضُ بِأَمۡرِهِۦ ثُمَّ إِذَا دَعَاكُمۡ دَعۡوَةٗ مِّنَ ٱلۡأَرۡضِ إِذَآ أَنتُمۡ تَخۡرُجُونَ ۝٢٥ وَلَهُۥ مَن فِي ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۖ كُلّٞ لَّهُۥ قَٰنِتُونَ ۝٢٦",
-      "latin":
-          "Fa subḥānallāhi ḥīna tumsūna wa ḥīna tuṣbiḥūn ۝١٧ Walahul-ḥamdu fis-samāwāti wal-arḍi wa ‘ashiyyan wa ḥīna tuẓhirūn ۝١٨ Yukhrijul-ḥayya minal-mayyiti wa yukhrijul-mayyita minal-ḥayyi wa yuḥyil-arḍa ba'da mawtihā wa kadhālika tukh'rajūn ۝١٩ Wamin āyātihi an khalaqakum min turābin thumma idhā antum basharun tantashirūn ۝٢٠ Wamin āyātihi an khalaqa lakum min anfusikum azwājan litaskunū ilayhā wa ja'ala baynakum mawaddatan wa raḥmatan inna fī dhālika laāyātin liqawmin yatafakkarūn ۝٢١ Wamin āyātihi khalqus-samāwāti wal-arḍi wa khtilāfu alsinatikum wa alwānikum inna fī dhālika laāyātin lil-'ālimīn ۝٢٢ Wamin āyātihi manāmukum bil-layli wan-nahāri wa abtighā'ukum min faḍlih inna fī dhālika laāyātin liqawmin yasma'ūn ۝٢٣ Wamin āyātihi yurīkumul-barqa khawfan wa ṭama'an wa yunazzilu minas-samā'i mā'an fa yuḥyī bihil-arḍa ba'da mawtihā inna fī dhālika laāyātin liqawmin ya'qilūn ۝٢٤ Wamin āyātihi an taqūma as-samā'u wal-arḍu bi amrih thumma idhā da'ākum da'watan minal-arḍi idhā antum takhrujūn ۝٢٥ Walahu man fis-samāwāti wal-arḍi kullun lahu qānitūn ۝٢٦",
-      "arti":
-          "Maka bertasbihlah kepada Allah pada waktu kamu berada di petang hari dan pada waktu kamu berada di pagi hari (17). Dan segala puji bagi-Nya di langit dan di bumi serta pada waktu petang dan pada waktu zuhur (18). Dia mengeluarkan yang hidup dari yang mati, dan mengeluarkan yang mati dari yang hidup, serta menghidupkan bumi setelah mati (kering). Demikianlah kamu akan dikeluarkan (dari dalam kubur) (19). Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan kamu dari tanah, kemudian tiba-tiba kamu (menjadi) manusia yang berkembang biak (20). Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir (21). ..."
-    },
-    {
-      "no": 16,
-      "kategori": "Petang",
-      "surah": "Surah Ghafir ayat 1-3",
-      "ayat": "1-3",
-      "dibaca": "1",
-      "dzikir":
-          "حم ۝١ تَنزِيلُ ٱلۡكِتَٰبِ مِنَ ٱللَّهِ ٱلۡعَزِيزِ ٱلۡعَلِيمِ ۝٢ غَافِرِ ٱلذَّنۢبِ وَقَابِلِ ٱلتَّوۡبِ شَدِيدِ ٱلۡعِقَابِ ذِي ٱلطَّوۡلِۖ لَآ إِلَٰهَ إِلَّا هُوَۖ إِلَيۡهِ ٱلۡمَصِيرُ ۝٣",
-      "latin":
-          "Ḥā Mīm ۝١ Tanzīlul-kitābi mina allāhi al-'azīzi al-'alīm ۝٢ Ghāfiridh-dhanbi wa qābilit-tawbi shadīdi al-'iqābi dhīṭ-ṭawli lā ilāha illā huwa ilayhi al-maṣīr ۝٣",
-      "arti":
-          "\"Hā Mīm (1). Diturunkannya Kitab ini dari Allah Yang Maha Perkasa, Maha Mengetahui (2). Yang Mengampuni dosa, Menerima tobat, keras hukuman-Nya, dan memiliki karunia. Tidak ada tuhan selain Dia. Hanya kepada-Nya lah (semua makhluk) kembali (3).\""
-    },
-    {
-      "no": 17,
-      "kategori": "Petang",
-      "surah": "Surah Al-Hasyr ayat 22-24",
-      "ayat": "22-24",
-      "dibaca": "1",
-      "dzikir":
-          "هُوَ ٱللَّهُ ٱلَّذِي لَآ إِلَٰهَ إِلَّا هُوَۖ عَٰلِمُ ٱلۡغَيۡبِ وَٱلشَّهَٰدَةِۖ هُوَ ٱلرَّحۡمَٰنُ ٱلرَّحِيمُ ۝٢٢ هُوَ ٱللَّهُ ٱلَّذِي لَآ إِلَٰهَ إِلَّا هُوَ ٱلۡمَلِكُ ٱلۡقُدُّوسُ ٱلسَّلَٰمُ ٱلۡمُؤۡمِنُ ٱلۡمُهَيۡمِنُ ٱلۡعَزِيزُ ٱلۡجَبَّارُ ٱلۡمُتَكَبِّرُۚ سُبۡحَٰنَ ٱللَّهِ عَمَّا يُشۡرِكُونَ ۝٢٣ هُوَ ٱللَّهُ ٱلۡخَٰلِقُ ٱلۡبَارِئُ ٱلۡمُصَوِّرُۚ لَهُ ٱلۡأَسۡمَآءُ ٱلۡحُسۡنَىٰۚ يُسَبِّحُ لَهُۥ مَا فِي ٱلسَّمَٰوَٰتِ وَٱلۡأَرۡضِۖ وَهُوَ ٱلۡعَزِيزُ ٱلۡحَكِيمُ ۝٢٤",
-      "latin":
-          "Huwallāhullazī lā ilāha illā huwa 'ālimul-ghaibi wasy-syahādah, huwar-raḥmānur-raḥīm ۝٢٢ Huwallāhullazī lā ilāha illā huwa al-malikul-quddūs as-salāmul-mu'minul-muhaiminul-'azīzul-jabbāru al-mutakabbir, subḥānallāhi 'ammā yusyrikūn ۝٢٣ Huwallāhul-khāliq, al-bāri', al-muṣawwir, lahul-asmā'ul-ḥusnā, yusabbiḥu lahū mā fis-samāwāti wal-arḍ, wa huwal-'azīzul-ḥakīm ۝٢٤",
-      "arti":
-          "\"Dialah Allah, tidak ada Tuhan selain Dia, Yang Maha Mengetahui yang gaib dan yang nyata. Dialah Yang Maha Pengasih, Maha Penyayang (22). Dialah Allah, tidak ada Tuhan selain Dia, Raja, Yang Maha Suci, Yang Maha Sejahtera, Yang Maha Memberi Keamanan, Yang Maha Mengawasi, Yang Maha Perkasa, Yang Maha Kuasa, Yang Maha Agung. Mahasuci Allah dari apa yang mereka persekutukan (23). Dialah Allah, Sang Pencipta, Sang Pembuat, Sang Pembentuk. Dia memiliki nama-nama yang indah. Semua yang di langit dan di bumi bertasbih kepada-Nya. Dialah Yang Maha Perkasa, Maha Bijaksana (24).\""
-    },
-    {
-      "no": 18,
-      "kategori": "Petang",
-      "surah": "Surah Az-Zalzalah ayat 1-8",
-      "ayat": "1-8",
-      "dibaca": "1",
-      "dzikir":
-          "إِذَا زُلْزِلَتِ ٱلۡأَرْضُ زِلْزَالَهَا ۝١ وَأَخْرَجَتِ ٱلۡأَرْضُ أَثْقَالَهَا ۝٢ وَقَالَ ٱلۡإِنسَٰنُ مَا لَهَا ۝٣ يَوْمَئِذٍۢ تُحَدِّثُ أَخْبَارَهَا ۝٤ بِأَنَّ رَبَّكَ أَوْحَىٰ لَهَا ۝٥ يَوْمَئِذٍۢ يَصْدُرُ ٱلنَّاسُ أَشْتَاتًۭا لِّيُرَوْا۟ أَعْمَٰلَهُمْ ۝٦ فَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍ خَيْرًۭا يَرَهُۥ ۝٧ وَمَن يَعْمَلْ مِثْقَالَ ذَرَّةٍۢ شَرًّۭا يَرَهُۥ ۝٨",
-      "latin":
-          "Iżā zulzilatil-arḍu zilzālahā ۝١ wa akhrajatil-arḍu aṡqālahā ۝٢ wa qālal-insānu mā lahā ۝٣ yauma`iżin tuḥaddiṡu akhbārahā ۝٤ bi`anna rabbaka auḥā lahā ۝٥ yauma`iżiy yaṣdurun-nāsu asytātal liyuraw a'mālahum ۝٦ fa man ya'mal miṡqāla żarratin khairay yarahū ۝٧ wa man ya'mal miṡqāla żarratin syarray yarahū ۝٨",
-      "arti":
-          "\"Apabila bumi digoncangkan dengan goncangannya yang dahsyat (1), dan bumi telah mengeluarkan beban-beban berat yang dikandungnya (2), dan manusia bertanya, 'Apa yang terjadi pada bumi ini?' (3), pada hari itu bumi menyampaikan beritanya (4), karena sesungguhnya Tuhanmu telah memerintahkan (yang sedemikian itu) kepadanya (5). Pada hari itu manusia keluar dari kuburnya dalam keadaan bermacam-macam, untuk diperlihatkan kepada mereka (balasan) pekerjaan mereka (6). Maka barang siapa mengerjakan kebaikan seberat zarrah, niscaya dia akan melihat (balasan)nya (7). Dan barang siapa mengerjakan kejahatan seberat zarrah, niscaya dia akan melihat (balasan)nya pula (8).\""
-    },
-    {
-      "no": 18,
-      "kategori": "Petang",
-      "surah": "Surah Al-Kafirun ayat 1-6",
-      "ayat": "1-6",
-      "dibaca": "1",
-      "dzikir":
-          "قُلْ يَا أَيُّهَا ٱلْكَٰفِرُونَ ۝١ لَآ أَعْبُدُ مَا تَعْبُدُونَ ۝٢ وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ ۝٣ وَلَآ أَنَا۠ عَابِدٌۭ مَّا عَبَدتُّمْ ۝٤ وَلَآ أَنتُمْ عَٰبِدُونَ مَآ أَعْبُدُ ۝٥ لَكُمْ دِينُكُمْ وَلِىَ دِينِ ۝٦",
-      "latin":
-          "Qul yā ayyuhal-kāfirụn ۝١ lā a'budu mā ta'budụn ۝٢ wa lā antum 'ābidụna mā a'bud ۝٣ wa lā ana 'ābidum mā 'abadtum ۝٤ wa lā antum 'ābidụna mā a'bud ۝٥ lakum dīnukum wa liya dīn ۝٦",
-      "arti":
-          "\"Katakanlah (Muhammad), 'Wahai orang-orang kafir! (1) Aku tidak akan menyembah apa yang kamu sembah (2), dan kamu bukan penyembah apa yang aku sembah (3). Aku juga tidak pernah menjadi penyembah apa yang kamu sembah (4), dan kamu tidak pernah (pula) menjadi penyembah apa yang aku sembah (5). Untukmu agamamu, dan untukku agamaku (6).\""
-    },
-    {
-      "no": 18,
-      "kategori": "Petang",
-      "surah": "Surah An-Nasr ayat 1-3",
-      "ayat": "1-3",
-      "dibaca": "1",
-      "dzikir":
-          "إِذَا جَآءَ نَصْرُ ٱللَّهِ وَٱلْفَتْحُ ۝١ وَرَأَيْتَ ٱلنَّاسَ يَدْخُلُونَ فِى دِينِ ٱللَّهِ أَفْوَاجًۭا ۝٢ فَسَبِّحْ بِحَمْدِ رَبِّكَ وَٱسْتَغْفِرْهُ ۚ إِنَّهُۥ كَانَ تَوَّابًۭا ۝٣",
-      "latin":
-          "Iżā jā'a naṣrullāhi wal-fatḥu ۝١ wa ra`aitan-nāsa yadkhulụna fī dīnillāhi afwājā ۝٢ fa sabbiḥ biḥamdi rabbika wastagfir`h, innahụ kāna tawwābā ۝٣",
-      "arti":
-          "\"Apabila telah datang pertolongan Allah dan kemenangan, (1) dan engkau melihat manusia berbondong-bondong masuk ke dalam agama Allah, (2) maka bertasbihlah dengan memuji Tuhanmu dan mohonlah ampun kepada-Nya. Sungguh, Dia Maha Penerima tobat. (3)\""
-    },
-    {
-      "no": 19,
       'kategori': 'Umum',
       "surah": "Surah Al-Ikhlas",
       "ayat": "1-4",
@@ -276,7 +136,7 @@ Map<String, dynamic> response = {
           '(1) Katakanlah: “Dia-lah Allah, Yang Maha Esa, (2) Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu. (3) Dia tiada beranak dan tiada pula diperanakkan, (4) dan tidak ada seorang pun yang setara dengan Dia”.',
     },
     {
-      "no": 20,
+      "no": 11,
       'kategori': 'Umum',
       "surah": "Surah Al-Falaq",
       "ayat": "1-5",
@@ -289,7 +149,7 @@ Map<String, dynamic> response = {
           '(1) Katakanlah: “Aku berlindung kepada Tuhan Yang Menguasai subuh, (2) dari kejahatan makhluk-Nya, (3) dan dari kejahatan malam apabila telah gelap gulita, (4) dan dari kejahatan wanita-wanita tukang sihir yang menghembus pada buhul-buhul, (5) dan dari kejahatan orang yang dengki apabila ia dengki”.',
     },
     {
-      "no": 21,
+      "no": 12,
       'kategori': 'Umum',
       "surah": "Surah An-Naas",
       "ayat": "1-6",
@@ -302,7 +162,7 @@ Map<String, dynamic> response = {
           '(1) Katakanlah: “Aku berlindung kepada Tuhan (yang memelihara dan menguasai) manusia. (2) Raja manusia. (3) Sembahan manusia. (4) dari kejahatan (bisikan) syaithan yang biasa bersembunyi,(5) yang membisikkan (kejahatan) ke dalam dada manusia. (6) dari (golongan) jin dan manusia.',
     },
     {
-      "no": 22,
+      "no": 13,
       'kategori': 'Pagi',
       "surah": "Doa Al-Matsurat Pagi",
       "ayat": "1",
@@ -315,7 +175,7 @@ Map<String, dynamic> response = {
           'Kami berpagi hari dan berpagi hari pula kerjaan milik Allah. Segala puji bagi Allah, tiada sekutu bagi-Nya, tiada Tuhan melainkan Dia dan kepada-Nya tempat kembali.',
     },
     {
-      "no": 23,
+      "no": 14,
       'kategori': 'Petang',
       "surah": "Doa Al-Matsurat Petang",
       "ayat": "1",
@@ -328,7 +188,7 @@ Map<String, dynamic> response = {
           'Kami bersore hari dan bersore hari pula kerajaan milik Allah. Segala puji bagi Allah, tiada sekutu bagi-Nya, tiada Tuhan melainkan Dia dan kepada-Nya tempat kembali.',
     },
     {
-      "no": 24,
+      "no": 15,
       'kategori': 'Pagi',
       "surah": "Doa Al-Matsurat Pagi",
       "ayat": "2",
@@ -341,7 +201,7 @@ Map<String, dynamic> response = {
           'Di waktu pagi kami memegang agama Islam, kalimat ikhlas, agama Nabi kita Muhammad shallallahu ‘alaihi wa sallam, dan agama ayah kami Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang musyrik.',
     },
     {
-      "no": 25,
+      "no": 16,
       'kategori': 'Petang',
       "surah": "Doa Al-Matsurat Petang",
       "ayat": "2",
@@ -353,8 +213,9 @@ Map<String, dynamic> response = {
       "arti":
           'Di waktu sore kami memegang agama Islam, kalimat ikhlas, agama Nabi kita Muhammad shallallahu ‘alaihi wa sallam, dan agama ayah kami Ibrahim, yang berdiri di atas jalan yang lurus, muslim dan tidak tergolong orang-orang musyrik.',
     },
+
     {
-      "no": 26,
+      "no": 17,
       'kategori': 'Pagi',
       "surah": "Doa Al-Matsurat Pagi",
       "ayat": "3",
@@ -367,7 +228,7 @@ Map<String, dynamic> response = {
           'Ya Allah, sesungguhnya aku berpagi hari dari-Mu dalam kenikmatan, kesehatan dan perlindungan. Maka sempurnakannlah untukku kenikmatan, kesehatan dan perlindungan-Mu itu di dunia dan akhirat.',
     },
     {
-      "no": 27,
+      "no": 18,
       'kategori': 'Petang',
       "surah": "Doa Al-Matsurat Petang",
       "ayat": "3",
@@ -379,8 +240,9 @@ Map<String, dynamic> response = {
       "arti":
           'Ya Allah, sesungguhnya aku bersore hari dari-Mu dalam kenikmatan, kesehatan dan perlindungan. Maka sempurnakannlah untukku kenikmatan, kesehatan dan perlindungan-Mu itu di dunia dan akhirat.',
     },
+
     {
-      "no": 28,
+      "no": 19,
       'kategori': 'Pagi',
       "surah": "Doa Al-Matsurat Pagi",
       "ayat": "4",
@@ -393,7 +255,7 @@ Map<String, dynamic> response = {
           'Ya Allah, kenikmatan yang aku atau salah seorang dari makhluk-Mu berpagi hari dengannya adalah dari-Mu semata; tiada sekutu bagi-Mu. Maka bagi-Mu segala puji dan rasa syukur.',
     },
     {
-      "no": 29,
+      "no": 20,
       'kategori': 'Petang',
       "surah": "Doa Al-Matsurat Petang",
       "ayat": "4",
@@ -406,7 +268,7 @@ Map<String, dynamic> response = {
           'Ya Allah, kenikmatan yang aku atau salah seorang dari makhluk-Mu bersore hari dengannya adalah dari-Mu semata; tiada sekutu bagi-Mu. Maka bagi-Mu segala puji dan rasa syukur.',
     },
     {
-      "no": 30,
+      "no": 21,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "5",
@@ -419,7 +281,7 @@ Map<String, dynamic> response = {
           'Ya Tuhanku, Segala puji bagiMu sebagaimana seyogyanya kemuliaan wajahMu dan keagungan kekuasaanMu.',
     },
     {
-      "no": 31,
+      "no": 22,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "6",
@@ -432,7 +294,7 @@ Map<String, dynamic> response = {
           'Aku ridha Allah sebagai Rabb, Islam sebagai agama, dan Muhammad sebagai Rasul.',
     },
     {
-      "no": 32,
+      "no": 23,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "7",
@@ -445,7 +307,7 @@ Map<String, dynamic> response = {
           'Maha Suci Allah dan Segala Puji bagiNya, sebanyak bilangan makhlukNya, seridha diriNya, setimbangan ‘arsy-Nya, dan sebanyak tinta dari kata-kataNya.',
     },
     {
-      "no": 33,
+      "no": 24,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "8",
@@ -458,7 +320,7 @@ Map<String, dynamic> response = {
           'Dengan nama Allah Yang bersama NamaNya sesuatu apa pun tidak akan celaka baik di bumi dan di langit. Dialah Maha Medengar lagi maha Mengetahui.',
     },
     {
-      "no": 34,
+      "no": 25,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "9",
@@ -471,7 +333,7 @@ Map<String, dynamic> response = {
           'Ya Allah sesungguhnya kami berlindung kepadaMu dari menyekutukanMu dengan sesuatu yang kami ketahui, dan kami memohon ampunanMu dari apa-apa yang tidak kami ketahui.',
     },
     {
-      "no": 35,
+      "no": 26,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "10",
@@ -483,7 +345,7 @@ Map<String, dynamic> response = {
           'Aku berlindung dengan kalimat Allah yang sempurna dari keburukan apa-apa yang Dia ciptakan.',
     },
     {
-      "no": 36,
+      "no": 27,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "11",
@@ -496,20 +358,21 @@ Map<String, dynamic> response = {
           'Ya Allah, aku berlindung kepada-Mu dari rasa gelisah dan sedih, dari kelemahan dan kemalasan, dari sifat pengecut dan bakhil, dan dari lilitan hutang dan kesewenang-wenangan orang.',
     },
     {
-      "no": 37,
+      "no": 28,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "12",
       'dibaca': '3',
       "dzikir":
-          "اَللَّهُمَّ عَافِنِي فِي بَدَنِي اَللَّهُمَّ عَافِنِي فِي سَمْعِي اَللَّهُمَّ عَافِنِي فِي بَصَرِي",
+          "اَللَّهُمَّ عَافِنِي فِي بَدَنِي اَللَّهُمَّ عَافِنِي فِي سَمْعِي اَللَّهُمَّ عَافِنِي فِي بَصَرِي اللّٰهُـمَّ عَافِنِيْ فِيْ قَلْبِيْ",
       "latin":
-          "Allahumma ‘aafinii fii badanii, Allahumma ‘aafinii fii sam’ii, Allahumma ‘aa finii fii bashorii",
+          "Allahumma ‘aafinii fii badanii, Allahumma ‘aafinii fii sam’ii, Allahumma ‘aa finii fii bashorii, Allahumma ‘aafinii fii qalbii",
       "arti":
-          'Ya Allah berikanlah kesehatan bagi badanku, bagi pendengaranku, bagi penglihatanku.',
+          'Ya Allah berikanlah kesehatan bagi badanku, bagi pendengaranku, bagi penglihatanku, dan bagi hatiku.',
     },
+
     {
-      "no": 38,
+      "no": 29,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "13",
@@ -522,7 +385,7 @@ Map<String, dynamic> response = {
           'Ya Allah sungguh aku berlindung kepadaMu dari kekufuran dan kefaqiran, Ya Allah sungguh aku berlindung kepadaMu dari azab kubur, tidak ada Ilah kecuali Engkau.',
     },
     {
-      "no": 39,
+      "no": 30,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "14",
@@ -535,7 +398,7 @@ Map<String, dynamic> response = {
           'Ya Allah, Engkau Tuhanku, tiada Tuhan kecuali Engkau. Engkau ciptakan aku dan aku adalah hamba-Mu. Aku berada di atas janjiMu, semampuku. Aku berlindung kepadaMu dari keburukan perbuatanku. Aku mengakui banyaknya nikmat (yang Engkau anugerahkan) kepadaku dan aku mengakui dosa-dosaku, maka ampunilah aku. Karena sesungguhnya tiada yang mengampuni dosa-dosa melainkan Engkau',
     },
     {
-      "no": 40,
+      "no": 31,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "15",
@@ -548,9 +411,9 @@ Map<String, dynamic> response = {
           'Aku memohon ampunan Allah Yang Tiada Tuhan melainkan Dia, Yang Maha Hidup dan Maha Mengurus (makhluk-Nya).',
     },
     {
-      "no": 41,
+      "no": 32,
       'kategori': 'Umum',
-      "surah": "Doa Al-Matsurat",
+      "surah": "SHALAWAT Nabi",
       "ayat": "16",
       'dibaca': '10',
       "dzikir":
@@ -561,7 +424,7 @@ Map<String, dynamic> response = {
           'Ya Allah berikanlah shalawat kepada Nabi Muhammad dan keluarga Nabi Muhammad, sebagaimana telah Engkau berikan kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Berikanlah barakah kepada Nabi Muhammad dan keluarga Nabi Muhammad, sebagaimana telah Engkau berikan kepada Nabi Ibrahim dan keluarga Nabi Ibrahim. Di alam Engkaulah Yang Maha Terpuji lagi Maha Mulia.',
     },
     {
-      "no": 42,
+      "no": 33,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "17",
@@ -574,7 +437,7 @@ Map<String, dynamic> response = {
           'Maha Suci Allah, segala puji bagi Allah, tiada Tuhan melainkan Allah dan Allah Maha Besar.',
     },
     {
-      "no": 43,
+      "no": 34,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "18",
@@ -587,7 +450,7 @@ Map<String, dynamic> response = {
           'Tiada Tuhan melainkan Allah semata, yang tiada sekutu bagi-Nya, bagi-Nya kerajaan dan bagi-Nya segala puji, dan Dia berkuasa ata segala sesuatu.',
     },
     {
-      "no": 44,
+      "no": 35,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "19",
@@ -600,7 +463,7 @@ Map<String, dynamic> response = {
           'Maha suci Engkau ya Allah, dan segala puji bagi-Mu. Aku bersaksi bahwa tiada Tuhan melainkan Engkau, aku memohon ampunan dan bertaubat kepada-Mu',
     },
     {
-      "no": 45,
+      "no": 36,
       'kategori': 'Umum',
       "surah": "Doa Al-Matsurat",
       "ayat": "20",
@@ -613,20 +476,20 @@ Map<String, dynamic> response = {
           'Ya Allah berikanlah shalawat kepada Nabi Muhammad; hamba-Mu, nabi-Mu, dan Rasul-Mu; Nabi yang ummi. Juga kepada keluarga dan para sahabatnya serta berilah keselamatan sebanyak yang terjangkau oleh ilmu-Mu yang tergores oleh pena-Mu, dan yang terangkum oleh kitab-Mu. Ridhailah ya Allah para pemimpin kami, Abu Bakar, Umar, Utsman, dan Ali, semua sahabat, semua tabi’in dan orang-orang yang mengikuti mereka sampai hari pembalasan',
     },
     {
-      "no": 46,
+      "no": 37,
       'kategori': 'Umum',
-      "surah": "Surah Ash-Shaffat ayat 180-182",
-      "ayat": "180-182",
-      'dibaca': '1',
+      "surah": "Doa Al-Matsurat",
+      "ayat": "21",
+      'dibaca': '3',
       "dzikir":
-          "سُبْحٰنَ رَبِّكَ رَبِّ الْعِزَّةِ عَمَّا يَصِفُوْنَۚ ۝١٨٠ وَسَلٰمٌ عَلَى الْمُرْسَلِيْنَۚ ۝١٨١ وَالْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَࣖ ۝١٨٢",
+          "اَلَّلهُمَّ صَلِّى عَلَى سَيِّدِنَا مُحَمَّدٍ عَبْدِكَ وَنَبِيِّكَ وَرَسُوْلِكَ النَّبِىِّ الْأُمِّىِّ وَعَلَى اَلِهِ وَصَحْبِهِ وَسَلِّمْ تَسْلِمًا عَدَدَمَا أَحَدَ بِهِ عِلْمُكَ وَخَطَّ بِهِ قَلَمُكَ وَأَخْصَاهُ كِتَابُكَ وَارْضَ الَّلهُمَّ عَنْ سَدَاتِنَا أَبِى بَكْرٍ وَعُمَرَ وَعُثْمَانَ وَعَلِيٍّ وَعَنِ الصَّحَابَةِ أَجْمَعِيْنَ وَعَنْ التَّابِعِيْنَ وَتَابِعِيْهِمْ بِإِحْسَانٍ إِلَى يَوْمِ الدِّيْنِ",
       "latin":
-          "sub-ḫâna rabbika rabbil-‘izzati ‘ammâ yashifûn. wa salâmun ‘alal-mursalîn. wal-ḫamdu lillâhi rabbil-‘âlamîn. ",
+          "Alloohumma sholli 'alaa sayyidina muhammadin 'abdika wa nabiyyika wa  rosuulikan-nabiyyil ummiyyi wa 'alaa aalihi wa shohbihi wa sallama tasliiman  'adada maa ahaatho bihi 'ilmuka wa kh oth tho bihi qolamuka wa ahshoohu  kitaabuk, wardholloohumma 'an saadaatinaa abii bakrin wa 'umaro wa  'utsmaana wa 'aliyy, wa 'anishshohaabat i ajma'iin, wa 'anit-taabi'iina wa  taabi'iihim bi ihsaanin ilaa yaumid-diin",
       "arti":
-          'Maha suci Tuhanmu; Tuhan kemuliaan, dari apa-apa yang mereka sifatkan. Keselamatan semoga tercurah kepada para utusan dan segala puji bagi Allah, Tuhan semesta alam.',
+          'Ya Allah berikanlah shalawat kepada Nabi Muhammad; hamba-Mu, nabi-Mu, dan Rasul-Mu; Nabi yang ummi. Juga kepada keluarga dan para sahabatnya serta berilah keselamatan sebanyak yang terjangkau oleh ilmu-Mu yang tergores oleh pena-Mu, dan yang terangkum oleh kitab-Mu. Ridhailah ya Allah para pemimpin kami, Abu Bakar, Umar, Utsman, dan Ali, semua sahabat, semua tabi’in dan orang-orang yang mengikuti mereka sampai hari pembalasan',
     },
     {
-      "no": 47,
+      "no": 38,
       'kategori': 'Umum',
       "surah": "Surah Ali-Imran ayat 26",
       "ayat": "26",
@@ -639,7 +502,7 @@ Map<String, dynamic> response = {
           'Katakanlah: "Wahai Tuhan Yang mempunyai kerajaan, Engkau berikan kerajaan kepada orang yang Engkau kehendaki dan Engkau cabut kerajaan dari orang yang Engkau kehendaki. Engkau muliakan orang yang Engkau kehendaki dan Engkau hinakan orang yang Engkau kehendaki. Di tangan Engkaulah segala kebajikan.Sesungguhnya Engkau Maha Kuasa atas segala sesuatu.',
     },
     {
-      "no": 48,
+      "no": 39,
       'kategori': 'Umum',
       "surah": "Surah Ali-Imran ayat 27",
       "ayat": "27",
@@ -652,7 +515,7 @@ Map<String, dynamic> response = {
           'Engkau masukkan malam ke dalam siang dan Engkau masukkan siang ke dalam malam. Engkau keluarkan yang hidup dari yang mati, dan Engkau keluarkan yang mati dari yang hidup. Dan Engkau beri rezeki siapa yang Engkau kehendaki tanpa hisab (batas).',
     },
     {
-      "no": 49,
+      "no": 40,
       'kategori': 'Umum',
       "surah": "Do'a Robithoh",
       "ayat": "1",
@@ -665,7 +528,7 @@ Map<String, dynamic> response = {
           'Ya Allah, sesungguhnya ini adalah siang-Mu (malam-Mu) yang telah menjelang dan (malam-Mu) siang-Mu yang tengah berlalu serta suara-suara penyeru-Mu, maka ampunilah aku.',
     },
     {
-      "no": 50,
+      "no": 41,
       'kategori': 'Umum',
       "surah": "Doa Robithoh",
       "ayat": "2",
@@ -677,5 +540,37 @@ Map<String, dynamic> response = {
       "arti":
           'Ya Allah, sesungguhnya Engkau Maha Mengetahui bahawa hati-hati ini, telah berhimpun di atas dasar kecintaan terhadapmu, bertemu di atas ketaatan kepada-Mu dan bersatu bagi memikul beban dakwah-Mu, hati-hati ini telah mengikat persetiaan untuk menolong meninggikan syariat-Mu. Oleh itu, Ya Allah, Engkau perkukuhkan ikatannya dan Engkau kekalkan kemesraan hati-hati ini, tunjukilah hati-hati ini akan jalan yang sebenar, serta penuhkanlah (piala) hati-hati ini dengan cahaya Rabbani-Mu yang tidak kunjung redup, lapangkanlah hati-hati dengan limpahan keimanan serta keindahan tawakkal kepada-Mu, hidup suburkanlah hati-hati ini dengan makrifat (pengenalan yang sebenarnya) tentang-Mu. (Jika Engkau takdirkan kami mati) maka matikanlah hati-hati ini sebagai para syuhada dalam perjuangan agama-Mu. Sesungguhnya Engkau sebaik-baik pelindung dan sebaik-baik penolong. Ya Allah perkenankanlah doa kami. Dan semoga shalawat serta salam selalu tercurah kepada Nabi Muhammad, keluarganya dan kepada semua sahabatnya.',
     },
-  ]
-};
+
+    // ... item lainnya
+  ];
+
+  // =====================
+  // METHOD PUBLIK
+  // =====================
+
+  /// Ambil semua dzikir pagi
+  /// = kategori "Umum" + kategori "Pagi", diurutkan by no
+  List<DzikirModel> getDzikirPagi() {
+    final filtered = _rawData
+        .where(
+            (item) => item['kategori'] == 'Umum' || item['kategori'] == 'Pagi')
+        .map((item) => DzikirModel.fromMap(item))
+        .toList();
+
+    filtered.sort((a, b) => a.no.compareTo(b.no));
+    return filtered;
+  }
+
+  /// Ambil semua dzikir petang
+  /// = kategori "Umum" + kategori "Petang", diurutkan by no
+  List<DzikirModel> getDzikirPetang() {
+    final filtered = _rawData
+        .where((item) =>
+            item['kategori'] == 'Umum' || item['kategori'] == 'Petang')
+        .map((item) => DzikirModel.fromMap(item))
+        .toList();
+
+    filtered.sort((a, b) => a.no.compareTo(b.no));
+    return filtered;
+  }
+}
